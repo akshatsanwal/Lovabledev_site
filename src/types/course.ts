@@ -95,11 +95,11 @@ export const TIERS: Record<string, CourseTier[]> = {
       id: 'complete',
       courseId: 'genai',
       name: 'Complete Package',
-      price: 55000,
+      price: 49999,
       originalPrice: 55000,
       duration: '8 months',
       popular: true,
-      savings: 0,
+      savings: 5001,
       features: ['All Basic + Intermediate + Advanced', 'Lifetime Access', 'Job Placement Support', 'Certificate']
     }
   ],
@@ -132,11 +132,11 @@ export const TIERS: Record<string, CourseTier[]> = {
       id: 'complete',
       courseId: 'blockchain',
       name: 'Complete Package',
-      price: 55000,
+      price: 49999,
       originalPrice: 55000,
       duration: '8 months',
       popular: true,
-      savings: 0,
+      savings: 5001,
       features: ['All Basic + Intermediate + Advanced', 'Lifetime Access', 'Job Placement Support', 'Certificate']
     }
   ],
@@ -169,11 +169,11 @@ export const TIERS: Record<string, CourseTier[]> = {
       id: 'complete',
       courseId: 'data-science',
       name: 'Complete Package',
-      price: 55000,
+      price: 49999,
       originalPrice: 55000,
       duration: '8 months',
       popular: true,
-      savings: 0,
+      savings: 5001,
       features: ['All Basic + Intermediate + Advanced', 'Lifetime Access', 'Job Placement Support', 'Certificate']
     }
   ],
@@ -206,11 +206,11 @@ export const TIERS: Record<string, CourseTier[]> = {
       id: 'complete',
       courseId: 'devops',
       name: 'Complete Package',
-      price: 55000,
+      price: 49999,
       originalPrice: 55000,
       duration: '8 months',
       popular: true,
-      savings: 0,
+      savings: 5001,
       features: ['All Basic + Intermediate + Advanced', 'Lifetime Access', 'Job Placement Support', 'Certificate']
     }
   ],
@@ -243,11 +243,11 @@ export const TIERS: Record<string, CourseTier[]> = {
       id: 'complete',
       courseId: 'microservices',
       name: 'Complete Package',
-      price: 55000,
+      price: 49999,
       originalPrice: 55000,
       duration: '8 months',
       popular: true,
-      savings: 0,
+      savings: 5001,
       features: ['All Basic + Intermediate + Advanced', 'Lifetime Access', 'Job Placement Support', 'Certificate']
     }
   ]

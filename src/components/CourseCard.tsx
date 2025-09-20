@@ -88,6 +88,9 @@ const CourseCard = ({ course, onAddToCart }: CourseCardProps) => {
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-primary">{formatPrice(currentTier.price)}</div>
+                {currentTier.originalPrice && currentTier.originalPrice > currentTier.price && (
+                  <div className="text-sm text-muted-foreground line-through">{formatPrice(currentTier.originalPrice)}</div>
+                )}
                 {currentTier.savings && currentTier.savings > 0 && (
                   <div className="text-sm text-success">Save {formatPrice(currentTier.savings)}</div>
                 )}
