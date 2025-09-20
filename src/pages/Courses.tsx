@@ -12,145 +12,375 @@ const Courses = () => {
       duration: '240+ Hours',
       students: '500+',
       projects: '15+',
-      modules: [
-        {
-          title: 'AI/ML Fundamentals',
-          duration: '60 hours',
-          topics: ['Machine Learning Basics', 'Deep Learning Introduction', 'Neural Networks', 'Python for AI', 'Data Preprocessing']
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '80 Hours',
+          topics: [
+            {
+              title: 'Introduction to Artificial Intelligence',
+              subtopics: ['What is AI?', 'Types of AI', 'AI vs ML vs DL', 'History and Evolution', 'Current Applications']
+            },
+            {
+              title: 'Python for AI',
+              subtopics: ['Python Basics', 'Libraries (NumPy, Pandas)', 'Data Structures', 'File Handling', 'Basic Algorithms']
+            },
+            {
+              title: 'Mathematics for AI',
+              subtopics: ['Linear Algebra', 'Statistics', 'Probability', 'Calculus Basics', 'Matrix Operations']
+            },
+            {
+              title: 'Machine Learning Fundamentals',
+              subtopics: ['Supervised Learning', 'Unsupervised Learning', 'Basic Algorithms', 'Data Preprocessing', 'Model Evaluation']
+            }
+          ]
         },
-        {
-          title: 'Large Language Models',
-          duration: '80 hours',
-          topics: ['LLM Architecture', 'Transformer Models', 'Fine-tuning Techniques', 'RAG Implementation', 'Vector Databases']
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '80 Hours',
+          topics: [
+            {
+              title: 'Deep Learning Foundations',
+              subtopics: ['Neural Networks', 'Activation Functions', 'Backpropagation', 'Gradient Descent', 'Overfitting Solutions']
+            },
+            {
+              title: 'Natural Language Processing',
+              subtopics: ['Text Processing', 'Tokenization', 'Word Embeddings', 'Sentiment Analysis', 'Language Models']
+            },
+            {
+              title: 'Computer Vision',
+              subtopics: ['Image Processing', 'CNNs', 'Image Classification', 'Object Detection', 'Transfer Learning']
+            },
+            {
+              title: 'Model Development',
+              subtopics: ['Framework Selection', 'Model Architecture', 'Training Strategies', 'Hyperparameter Tuning', 'Performance Metrics']
+            }
+          ]
         },
-        {
-          title: 'Prompt Engineering',
-          duration: '50 hours',
-          topics: ['Prompt Design Patterns', 'Chain of Thought', 'Few-shot Learning', 'Prompt Optimization', 'Advanced Techniques']
-        },
-        {
-          title: 'AI Applications',
-          duration: '50 hours',
-          topics: ['Chatbot Development', 'Image Generation', 'Code Generation', 'AI Agents', 'Production Deployment']
+        advanced: {
+          title: 'Advanced Level',
+          duration: '80 Hours',
+          topics: [
+            {
+              title: 'Large Language Models',
+              subtopics: ['Transformer Architecture', 'BERT/GPT Models', 'Fine-tuning Techniques', 'Prompt Engineering', 'RAG Implementation']
+            },
+            {
+              title: 'Generative AI',
+              subtopics: ['GANs', 'Diffusion Models', 'Image Generation', 'Text Generation', 'Multimodal Models']
+            },
+            {
+              title: 'Production AI Systems',
+              subtopics: ['Model Deployment', 'API Development', 'Scaling Solutions', 'Monitoring', 'MLOps Practices']
+            },
+            {
+              title: 'AI Ethics & Business',
+              subtopics: ['Ethical AI', 'Bias Detection', 'Responsible AI', 'AI Strategy', 'ROI Measurement']
+            }
+          ]
         }
-      ],
-      prerequisites: ['Basic Python Knowledge', 'Mathematical Foundation', 'Programming Experience'],
+      },
+      prerequisites: ['Basic Programming', 'Mathematical Foundation', 'Analytical Thinking'],
       outcomes: ['Build AI-powered applications', 'Implement LLM solutions', 'Master prompt engineering', 'Deploy AI systems']
     },
     'blockchain': {
       duration: '220+ Hours',
       students: '300+',
       projects: '12+',
-      modules: [
-        {
-          title: 'Blockchain Fundamentals',
-          duration: '50 hours',
-          topics: ['Blockchain Basics', 'Cryptography', 'Consensus Mechanisms', 'Bitcoin & Ethereum', 'Mining & Validation']
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '75 Hours',
+          topics: [
+            {
+              title: 'Blockchain Fundamentals',
+              subtopics: ['What is Blockchain?', 'Distributed Ledger', 'Cryptographic Hashing', 'Digital Signatures', 'Consensus Basics']
+            },
+            {
+              title: 'Cryptocurrency Basics',
+              subtopics: ['Bitcoin Overview', 'Ethereum Introduction', 'Wallets & Keys', 'Transactions', 'Mining Concepts']
+            },
+            {
+              title: 'Blockchain Architecture',
+              subtopics: ['Blocks & Chains', 'Merkle Trees', 'Network Types', 'Nodes & Validation', 'Immutability']
+            },
+            {
+              title: 'Development Environment',
+              subtopics: ['Setting up Tools', 'Test Networks', 'Blockchain Explorers', 'Basic Transactions', 'Wallet Integration']
+            }
+          ]
         },
-        {
-          title: 'Smart Contract Development',
-          duration: '70 hours',
-          topics: ['Solidity Programming', 'Contract Design Patterns', 'Security Best Practices', 'Testing & Debugging', 'Gas Optimization']
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '75 Hours',
+          topics: [
+            {
+              title: 'Smart Contract Development',
+              subtopics: ['Solidity Basics', 'Contract Structure', 'Data Types', 'Functions & Modifiers', 'Events & Logs']
+            },
+            {
+              title: 'Web3 Development',
+              subtopics: ['Web3.js Library', 'Ethereum API', 'Contract Interaction', 'Frontend Integration', 'MetaMask Connection']
+            },
+            {
+              title: 'DApp Architecture',
+              subtopics: ['Frontend Design', 'Backend Services', 'IPFS Storage', 'User Experience', 'Testing Strategies']
+            },
+            {
+              title: 'Token Development',
+              subtopics: ['ERC-20 Tokens', 'ERC-721 NFTs', 'Token Economics', 'ICO/IDO Concepts', 'Token Standards']
+            }
+          ]
         },
-        {
-          title: 'DApp Development',
-          duration: '60 hours',
-          topics: ['Web3.js Integration', 'Frontend Development', 'MetaMask Integration', 'IPFS Storage', 'User Experience']
-        },
-        {
-          title: 'DeFi & Advanced Topics',
-          duration: '40 hours',
-          topics: ['DeFi Protocols', 'DEX Development', 'Yield Farming', 'NFT Development', 'Cross-chain Solutions']
+        advanced: {
+          title: 'Advanced Level',
+          duration: '70 Hours',
+          topics: [
+            {
+              title: 'DeFi Development',
+              subtopics: ['DEX Protocols', 'Liquidity Pools', 'Yield Farming', 'Flash Loans', 'Governance Tokens']
+            },
+            {
+              title: 'Advanced Smart Contracts',
+              subtopics: ['Design Patterns', 'Security Auditing', 'Gas Optimization', 'Upgradeable Contracts', 'Cross-chain']
+            },
+            {
+              title: 'Enterprise Blockchain',
+              subtopics: ['Private Networks', 'Hyperledger', 'Supply Chain', 'Identity Management', 'Consortium Chains']
+            },
+            {
+              title: 'Emerging Technologies',
+              subtopics: ['Layer 2 Solutions', 'Interoperability', 'Quantum Resistance', 'Green Blockchain', 'Future Trends']
+            }
+          ]
         }
-      ],
-      prerequisites: ['JavaScript Knowledge', 'Web Development Basics', 'Programming Fundamentals'],
+      },
+      prerequisites: ['Programming Basics', 'Web Development', 'Cryptography Concepts'],
       outcomes: ['Build blockchain applications', 'Develop smart contracts', 'Create DeFi protocols', 'Launch NFT projects']
     },
     'data-science': {
       duration: '260+ Hours',
       students: '800+',
       projects: '20+',
-      modules: [
-        {
-          title: 'Python & Data Analysis',
-          duration: '70 hours',
-          topics: ['Python Programming', 'NumPy & Pandas', 'Data Cleaning', 'Exploratory Data Analysis', 'Statistical Analysis']
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '85 Hours',
+          topics: [
+            {
+              title: 'Python Programming',
+              subtopics: ['Python Syntax', 'Data Structures', 'Control Flow', 'Functions', 'Object-Oriented Programming']
+            },
+            {
+              title: 'Data Analysis Basics',
+              subtopics: ['NumPy Arrays', 'Pandas DataFrames', 'Data Cleaning', 'Data Transformation', 'File Handling']
+            },
+            {
+              title: 'Statistics Foundation',
+              subtopics: ['Descriptive Statistics', 'Probability', 'Distributions', 'Hypothesis Testing', 'Correlation']
+            },
+            {
+              title: 'Data Visualization',
+              subtopics: ['Matplotlib Basics', 'Seaborn Plots', 'Chart Types', 'Color Theory', 'Storytelling with Data']
+            }
+          ]
         },
-        {
-          title: 'Machine Learning',
-          duration: '80 hours',
-          topics: ['Supervised Learning', 'Unsupervised Learning', 'Model Evaluation', 'Feature Engineering', 'Ensemble Methods']
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '90 Hours',
+          topics: [
+            {
+              title: 'Machine Learning Algorithms',
+              subtopics: ['Linear Regression', 'Classification', 'Clustering', 'Decision Trees', 'Random Forest']
+            },
+            {
+              title: 'Feature Engineering',
+              subtopics: ['Feature Selection', 'Scaling & Normalization', 'Encoding Techniques', 'Dimensionality Reduction', 'PCA']
+            },
+            {
+              title: 'Model Evaluation',
+              subtopics: ['Cross Validation', 'Performance Metrics', 'Confusion Matrix', 'ROC Curves', 'Overfitting']
+            },
+            {
+              title: 'Advanced Analytics',
+              subtopics: ['Time Series Analysis', 'Text Mining', 'Web Scraping', 'A/B Testing', 'Business Intelligence']
+            }
+          ]
         },
-        {
-          title: 'Deep Learning',
-          duration: '60 hours',
-          topics: ['Neural Networks', 'CNN & RNN', 'Transfer Learning', 'TensorFlow & PyTorch', 'Computer Vision']
-        },
-        {
-          title: 'Data Visualization & Deployment',
-          duration: '50 hours',
-          topics: ['Matplotlib & Seaborn', 'Plotly & Dash', 'Tableau Integration', 'Model Deployment', 'MLOps Basics']
+        advanced: {
+          title: 'Advanced Level',
+          duration: '85 Hours',
+          topics: [
+            {
+              title: 'Deep Learning',
+              subtopics: ['Neural Networks', 'CNNs', 'RNNs', 'Transfer Learning', 'TensorFlow/PyTorch']
+            },
+            {
+              title: 'Big Data Technologies',
+              subtopics: ['Apache Spark', 'Hadoop Ecosystem', 'NoSQL Databases', 'Data Pipelines', 'Cloud Platforms']
+            },
+            {
+              title: 'MLOps & Deployment',
+              subtopics: ['Model Versioning', 'CI/CD for ML', 'Containerization', 'API Development', 'Monitoring']
+            },
+            {
+              title: 'Specialized Applications',
+              subtopics: ['Computer Vision', 'NLP Applications', 'Recommender Systems', 'Forecasting', 'Optimization']
+            }
+          ]
         }
-      ],
-      prerequisites: ['Basic Mathematics', 'Programming Fundamentals', 'Statistics Knowledge'],
+      },
+      prerequisites: ['Basic Mathematics', 'Programming Concepts', 'Statistical Thinking'],
       outcomes: ['Analyze complex datasets', 'Build ML models', 'Create data visualizations', 'Deploy ML solutions']
     },
     'devops': {
       duration: '200+ Hours',
       students: '600+',
       projects: '18+',
-      modules: [
-        {
-          title: 'DevOps Fundamentals',
-          duration: '50 hours',
-          topics: ['DevOps Culture', 'Version Control', 'Linux Administration', 'Scripting & Automation', 'Infrastructure Basics']
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '65 Hours',
+          topics: [
+            {
+              title: 'DevOps Fundamentals',
+              subtopics: ['DevOps Culture', 'Agile Methodology', 'Version Control (Git)', 'Linux Basics', 'Command Line']
+            },
+            {
+              title: 'System Administration',
+              subtopics: ['Linux Administration', 'Shell Scripting', 'Process Management', 'File Systems', 'Network Basics']
+            },
+            {
+              title: 'Version Control',
+              subtopics: ['Git Fundamentals', 'Branching Strategies', 'Merge Conflicts', 'GitHub/GitLab', 'Code Reviews']
+            },
+            {
+              title: 'Basic Automation',
+              subtopics: ['Scripting Languages', 'Task Automation', 'Cron Jobs', 'Log Management', 'Basic Monitoring']
+            }
+          ]
         },
-        {
-          title: 'CI/CD & Containerization',
-          duration: '60 hours',
-          topics: ['Jenkins & GitHub Actions', 'Docker Fundamentals', 'Container Orchestration', 'Pipeline Design', 'Testing Automation']
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '70 Hours',
+          topics: [
+            {
+              title: 'CI/CD Pipelines',
+              subtopics: ['Jenkins Setup', 'GitHub Actions', 'Build Automation', 'Testing Integration', 'Deployment Strategies']
+            },
+            {
+              title: 'Containerization',
+              subtopics: ['Docker Fundamentals', 'Container Images', 'Docker Compose', 'Registry Management', 'Best Practices']
+            },
+            {
+              title: 'Cloud Platforms',
+              subtopics: ['AWS/Azure Basics', 'Virtual Machines', 'Storage Services', 'Networking', 'Security Groups']
+            },
+            {
+              title: 'Configuration Management',
+              subtopics: ['Ansible Basics', 'Playbooks', 'Infrastructure Automation', 'Server Configuration', 'Package Management']
+            }
+          ]
         },
-        {
-          title: 'Cloud & Kubernetes',
-          duration: '50 hours',
-          topics: ['AWS/Azure Basics', 'Kubernetes Deployment', 'Service Mesh', 'Monitoring & Logging', 'Security Practices']
-        },
-        {
-          title: 'Infrastructure as Code',
-          duration: '40 hours',
-          topics: ['Terraform', 'Ansible', 'Configuration Management', 'Cloud Architecture', 'Cost Optimization']
+        advanced: {
+          title: 'Advanced Level',
+          duration: '65 Hours',
+          topics: [
+            {
+              title: 'Kubernetes Orchestration',
+              subtopics: ['K8s Architecture', 'Pods & Services', 'Deployments', 'ConfigMaps', 'Helm Charts']
+            },
+            {
+              title: 'Infrastructure as Code',
+              subtopics: ['Terraform', 'CloudFormation', 'State Management', 'Multi-environment', 'Best Practices']
+            },
+            {
+              title: 'Monitoring & Observability',
+              subtopics: ['Prometheus', 'Grafana', 'ELK Stack', 'Distributed Tracing', 'Alerting']
+            },
+            {
+              title: 'Advanced Practices',
+              subtopics: ['GitOps', 'Service Mesh', 'Security Scanning', 'Cost Optimization', 'Disaster Recovery']
+            }
+          ]
         }
-      ],
-      prerequisites: ['Linux Basics', 'Programming Knowledge', 'System Administration'],
+      },
+      prerequisites: ['Linux Knowledge', 'Programming Skills', 'Networking Basics'],
       outcomes: ['Implement CI/CD pipelines', 'Manage containerized applications', 'Automate infrastructure', 'Optimize cloud deployments']
     },
     'microservices': {
       duration: '180+ Hours',
       students: '400+',
       projects: '16+',
-      modules: [
-        {
-          title: 'Architecture Fundamentals',
-          duration: '45 hours',
-          topics: ['Microservices Patterns', 'Service Decomposition', 'API Design', 'Communication Patterns', 'Data Management']
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '60 Hours',
+          topics: [
+            {
+              title: 'Microservices Introduction',
+              subtopics: ['Monolith vs Microservices', 'Benefits & Challenges', 'When to Use', 'Service Boundaries', 'Design Principles']
+            },
+            {
+              title: 'API Development',
+              subtopics: ['RESTful APIs', 'HTTP Methods', 'Status Codes', 'JSON/XML', 'API Documentation']
+            },
+            {
+              title: 'Service Communication',
+              subtopics: ['Synchronous Communication', 'HTTP/REST', 'Request/Response', 'Error Handling', 'Timeouts']
+            },
+            {
+              title: 'Basic Architecture',
+              subtopics: ['Service Design', 'Data Storage', 'Stateless Services', 'Configuration', 'Environment Setup']
+            }
+          ]
         },
-        {
-          title: 'Implementation & Integration',
-          duration: '55 hours',
-          topics: ['Service Development', 'API Gateway', 'Service Discovery', 'Load Balancing', 'Event-Driven Architecture']
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '60 Hours',
+          topics: [
+            {
+              title: 'Advanced Communication',
+              subtopics: ['Message Queues', 'Event-Driven Architecture', 'Async Messaging', 'Message Brokers', 'Pub/Sub Patterns']
+            },
+            {
+              title: 'Service Integration',
+              subtopics: ['API Gateway', 'Service Discovery', 'Load Balancing', 'Circuit Breaker', 'Retry Patterns']
+            },
+            {
+              title: 'Data Management',
+              subtopics: ['Database per Service', 'Data Consistency', 'Distributed Transactions', 'Event Sourcing', 'CQRS']
+            },
+            {
+              title: 'Testing Strategies',
+              subtopics: ['Unit Testing', 'Integration Testing', 'Contract Testing', 'End-to-End Testing', 'Test Automation']
+            }
+          ]
         },
-        {
-          title: 'Observability & Security',
-          duration: '40 hours',
-          topics: ['Distributed Tracing', 'Monitoring & Metrics', 'Security Patterns', 'Authentication', 'Authorization']
-        },
-        {
-          title: 'Advanced Patterns',
-          duration: '40 hours',
-          topics: ['Circuit Breaker', 'Saga Pattern', 'CQRS', 'Performance Optimization', 'Scaling Strategies']
+        advanced: {
+          title: 'Advanced Level',
+          duration: '60 Hours',
+          topics: [
+            {
+              title: 'Distributed Systems',
+              subtopics: ['CAP Theorem', 'Eventual Consistency', 'Distributed Consensus', 'Partition Tolerance', 'Fault Tolerance']
+            },
+            {
+              title: 'Observability',
+              subtopics: ['Distributed Tracing', 'Centralized Logging', 'Metrics Collection', 'Health Checks', 'Alerting']
+            },
+            {
+              title: 'Security & Governance',
+              subtopics: ['Service-to-Service Auth', 'OAuth/JWT', 'API Security', 'Data Encryption', 'Compliance']
+            },
+            {
+              title: 'Performance & Scaling',
+              subtopics: ['Horizontal Scaling', 'Caching Strategies', 'Database Optimization', 'Performance Tuning', 'Capacity Planning']
+            }
+          ]
         }
-      ],
-      prerequisites: ['Backend Development', 'Database Knowledge', 'API Development'],
+      },
+      prerequisites: ['Backend Development', 'Database Design', 'API Knowledge'],
       outcomes: ['Design microservices architecture', 'Implement distributed systems', 'Handle service communication', 'Optimize system performance']
     }
   };
@@ -203,10 +433,16 @@ const Courses = () => {
       {/* Course Details */}
       <div className="container mx-auto px-4 py-16">
         <Tabs defaultValue={COURSES[0].id} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
+          <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 mb-8 h-auto p-2 bg-muted/50">
             {COURSES.map((course) => (
-              <TabsTrigger key={course.id} value={course.id} className="text-xs lg:text-sm">
-                {course.icon} {course.title.split(' ')[0]}
+              <TabsTrigger 
+                key={course.id} 
+                value={course.id} 
+                className="flex-col h-auto p-3 text-xs lg:text-sm whitespace-normal text-center data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                <div className="text-lg mb-1">{course.icon}</div>
+                <div className="font-medium">{course.title.split(' ')[0]}</div>
+                <div className="text-xs opacity-75 hidden lg:block">{course.title.split(' ').slice(1).join(' ')}</div>
               </TabsTrigger>
             ))}
           </TabsList>
@@ -250,26 +486,29 @@ const Courses = () => {
                 </CardContent>
               </Card>
 
-              {/* Course Modules */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Course Agenda by Levels */}
+              <div className="space-y-6">
+                {/* Beginner Level */}
                 <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
                   <CardHeader>
-                    <CardTitle className="text-foreground">Course Modules</CardTitle>
-                    <CardDescription>Detailed curriculum breakdown</CardDescription>
+                    <CardTitle className="text-foreground flex items-center">
+                      <Badge className="mr-3 bg-success text-success-foreground">Beginner</Badge>
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.beginner.title}
+                    </CardTitle>
+                    <CardDescription>
+                      Duration: {courseDetails[course.id as keyof typeof courseDetails].levels.beginner.duration} | Foundation Level Training
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      {courseDetails[course.id as keyof typeof courseDetails].modules.map((module, index) => (
-                        <div key={index} className="border-l-2 border-primary/20 pl-4 pb-4">
-                          <div className="flex justify-between items-center mb-2">
-                            <h4 className="font-semibold text-foreground">{module.title}</h4>
-                            <Badge variant="outline" className="text-xs">{module.duration}</Badge>
-                          </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.beginner.topics.map((topic, index) => (
+                        <div key={index} className="p-4 bg-muted/30 rounded-lg">
+                          <h4 className="font-semibold text-foreground mb-3">{topic.title}</h4>
                           <ul className="space-y-1">
-                            {module.topics.map((topic, topicIndex) => (
-                              <li key={topicIndex} className="flex items-center text-sm text-muted-foreground">
-                                <CheckCircle className="w-3 h-3 text-success mr-2 flex-shrink-0" />
-                                {topic}
+                            {topic.subtopics.map((subtopic, subIndex) => (
+                              <li key={subIndex} className="flex items-start text-xs text-muted-foreground">
+                                <div className="w-1 h-1 bg-success rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                                {subtopic}
                               </li>
                             ))}
                           </ul>
@@ -279,47 +518,124 @@ const Courses = () => {
                   </CardContent>
                 </Card>
 
-                <div className="space-y-6">
-                  {/* Prerequisites */}
-                  <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
-                    <CardHeader>
-                      <CardTitle className="text-foreground">Prerequisites</CardTitle>
-                      <CardDescription>What you need to know before starting</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {courseDetails[course.id as keyof typeof courseDetails].prerequisites.map((prereq, index) => (
-                          <li key={index} className="flex items-center text-muted-foreground">
-                            <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                            {prereq}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
+                {/* Intermediate Level */}
+                <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
+                  <CardHeader>
+                    <CardTitle className="text-foreground flex items-center">
+                      <Badge className="mr-3 bg-primary text-primary-foreground">Intermediate</Badge>
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.intermediate.title}
+                    </CardTitle>
+                    <CardDescription>
+                      Duration: {courseDetails[course.id as keyof typeof courseDetails].levels.intermediate.duration} | Practical Implementation
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.intermediate.topics.map((topic, index) => (
+                        <div key={index} className="p-4 bg-muted/30 rounded-lg">
+                          <h4 className="font-semibold text-foreground mb-3">{topic.title}</h4>
+                          <ul className="space-y-1">
+                            {topic.subtopics.map((subtopic, subIndex) => (
+                              <li key={subIndex} className="flex items-start text-xs text-muted-foreground">
+                                <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                                {subtopic}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
 
-                  {/* Learning Outcomes */}
-                  <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
-                    <CardHeader>
-                      <CardTitle className="text-foreground">Learning Outcomes</CardTitle>
-                      <CardDescription>What you'll achieve after completion</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {courseDetails[course.id as keyof typeof courseDetails].outcomes.map((outcome, index) => (
-                          <li key={index} className="flex items-center text-muted-foreground">
-                            <Award className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
-                            {outcome}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+                {/* Advanced Level */}
+                <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
+                  <CardHeader>
+                    <CardTitle className="text-foreground flex items-center">
+                      <Badge className="mr-3 bg-accent text-accent-foreground">Advanced</Badge>
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.advanced.title}
+                    </CardTitle>
+                    <CardDescription>
+                      Duration: {courseDetails[course.id as keyof typeof courseDetails].levels.advanced.duration} | Expert Level Mastery
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {courseDetails[course.id as keyof typeof courseDetails].levels.advanced.topics.map((topic, index) => (
+                        <div key={index} className="p-4 bg-muted/30 rounded-lg">
+                          <h4 className="font-semibold text-foreground mb-3">{topic.title}</h4>
+                          <ul className="space-y-1">
+                            {topic.subtopics.map((subtopic, subIndex) => (
+                              <li key={subIndex} className="flex items-start text-xs text-muted-foreground">
+                                <div className="w-1 h-1 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                                {subtopic}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Prerequisites & Outcomes Sidebar */}
+              <div className="space-y-6">
+                <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
+                  <CardHeader>
+                    <CardTitle className="text-foreground">Prerequisites</CardTitle>
+                    <CardDescription>Foundation knowledge required</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {courseDetails[course.id as keyof typeof courseDetails].prerequisites.map((prereq, index) => (
+                        <li key={index} className="flex items-center text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
+                          <span className="text-sm">{prereq}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
+                  <CardHeader>
+                    <CardTitle className="text-foreground">Learning Outcomes</CardTitle>
+                    <CardDescription>Skills you'll master</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {courseDetails[course.id as keyof typeof courseDetails].outcomes.map((outcome, index) => (
+                        <li key={index} className="flex items-center text-muted-foreground">
+                          <Award className="w-4 h-4 text-accent mr-3 flex-shrink-0" />
+                          <span className="text-sm">{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Quick Stats */}
+                <Card className="bg-gradient-primary text-primary-foreground border-0">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-2xl font-bold mb-2">{courseDetails[course.id as keyof typeof courseDetails].duration}</div>
+                    <div className="text-sm opacity-90 mb-4">Total Training Duration</div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <div className="font-semibold">{courseDetails[course.id as keyof typeof courseDetails].students}</div>
+                        <div className="opacity-75">Students</div>
+                      </div>
+                      <div>
+                        <div className="font-semibold">{courseDetails[course.id as keyof typeof courseDetails].projects}</div>
+                        <div className="opacity-75">Projects</div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
 
               {/* CTA Section */}
-              <Card className="bg-gradient-primary text-primary-foreground border-0 shadow-glow">
+              <Card className="bg-gradient-primary text-primary-foreground border-0 shadow-glow mt-8">
                 <CardContent className="text-center p-8">
                   <h3 className="text-2xl font-bold mb-4">Ready to Start Learning?</h3>
                   <p className="mb-6 opacity-90">
