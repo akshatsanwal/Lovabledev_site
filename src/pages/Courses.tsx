@@ -9,351 +9,447 @@ import { Link } from 'react-router-dom';
 const Courses = () => {
   const courseDetails = {
     'genai': {
-      duration: '240+ Hours',
+      duration: '140+ Hours',
       students: '500+',
       projects: '15+',
       levels: {
         beginner: {
           title: 'Beginner Level',
-          duration: '80 Hours',
+          duration: '35-40 Hours',
           topics: [
             {
-              title: 'Introduction to Artificial Intelligence',
-              subtopics: ['What is AI?', 'Types of AI', 'AI vs ML vs DL', 'History and Evolution', 'Current Applications']
+              title: 'Foundations of AI & GenAI (3 hrs)',
+              subtopics: ['AI vs ML vs DL vs GenAI', 'History & breakthroughs in Generative AI', 'Key models: GPT, Stable Diffusion, MidJourney', 'Real-world applications & industry use cases']
             },
             {
-              title: 'Python for AI',
-              subtopics: ['Python Basics', 'Libraries (NumPy, Pandas)', 'Data Structures', 'File Handling', 'Basic Algorithms']
+              title: 'Introduction to LLMs (5 hrs)',
+              subtopics: ['How LLMs work: tokens, embeddings, transformers', 'Pretraining vs fine-tuning', 'Popular open-source LLMs (LLaMA, Mistral, Falcon)', 'Hosted APIs (OpenAI, Anthropic, Cohere)']
             },
             {
-              title: 'Mathematics for AI',
-              subtopics: ['Linear Algebra', 'Statistics', 'Probability', 'Calculus Basics', 'Matrix Operations']
+              title: 'Prompt Engineering (6 hrs)',
+              subtopics: ['Zero-shot, few-shot prompting', 'Instruction-tuning', 'Role-based prompts & system instructions', 'Structured prompting with templates', 'Prompt chaining']
             },
             {
-              title: 'Machine Learning Fundamentals',
-              subtopics: ['Supervised Learning', 'Unsupervised Learning', 'Basic Algorithms', 'Data Preprocessing', 'Model Evaluation']
+              title: 'GenAI Tools & APIs (6 hrs)',
+              subtopics: ['OpenAI API basics (chat completions, embeddings)', 'Hugging Face Spaces & Models', 'Google Gemini, Anthropic Claude', 'VS Code + GitHub Copilot']
+            },
+            {
+              title: 'Hands-on with Text, Image, Audio (8 hrs)',
+              subtopics: ['Text: Q&A, summarization, rewriting', 'Images: DALL·E, Stable Diffusion, MidJourney basics', 'Audio: TTS (text-to-speech), STT (speech-to-text)', 'Safety & ethics in GenAI']
             }
           ]
         },
         intermediate: {
           title: 'Intermediate Level',
-          duration: '80 Hours',
+          duration: '45-50 Hours',
           topics: [
             {
-              title: 'Deep Learning Foundations',
-              subtopics: ['Neural Networks', 'Activation Functions', 'Backpropagation', 'Gradient Descent', 'Overfitting Solutions']
+              title: 'Model Fine-Tuning (8 hrs)',
+              subtopics: ['Fine-tuning vs adapter methods (LoRA, PEFT)', 'Hugging Face Trainer basics', 'Training domain-specific chatbots', 'Evaluating model performance']
             },
             {
-              title: 'Natural Language Processing',
-              subtopics: ['Text Processing', 'Tokenization', 'Word Embeddings', 'Sentiment Analysis', 'Language Models']
+              title: 'Retrieval-Augmented Generation (RAG) (7 hrs)',
+              subtopics: ['Why RAG is needed', 'Embeddings for semantic search', 'Vector databases: Pinecone, FAISS, Weaviate', 'Implementing a RAG-based chatbot']
             },
             {
-              title: 'Computer Vision',
-              subtopics: ['Image Processing', 'CNNs', 'Image Classification', 'Object Detection', 'Transfer Learning']
+              title: 'Multi-Modal Generative AI (6 hrs)',
+              subtopics: ['Text-to-image (Stable Diffusion, DALL·E)', 'Text-to-audio (ElevenLabs, Bark)', 'Text-to-video (Pika Labs, RunwayML)', 'Vision+Language (CLIP, BLIP-2)']
             },
             {
-              title: 'Model Development',
-              subtopics: ['Framework Selection', 'Model Architecture', 'Training Strategies', 'Hyperparameter Tuning', 'Performance Metrics']
+              title: 'GenAI in Software Development (6 hrs)',
+              subtopics: ['Copilot for code generation', 'AI-powered debugging', 'Test case generation', 'AI-assisted documentation']
+            },
+            {
+              title: 'Application Development with LangChain (8 hrs)',
+              subtopics: ['LangChain basics (chains, memory, tools, agents)', 'Connecting APIs & databases', 'Advanced prompting with LangChain', 'Deploying apps with Streamlit/Gradio']
             }
           ]
         },
         advanced: {
           title: 'Advanced Level',
-          duration: '80 Hours',
+          duration: '55+ Hours',
           topics: [
             {
-              title: 'Large Language Models',
-              subtopics: ['Transformer Architecture', 'BERT/GPT Models', 'Fine-tuning Techniques', 'Prompt Engineering', 'RAG Implementation']
+              title: 'Advanced Transformer Architectures (8 hrs)',
+              subtopics: ['Deep dive into attention mechanisms', 'Scaling laws, efficiency (quantization, pruning, distillation)', 'LoRA & PEFT methods']
             },
             {
-              title: 'Generative AI',
-              subtopics: ['GANs', 'Diffusion Models', 'Image Generation', 'Text Generation', 'Multimodal Models']
+              title: 'Scaling & Deployment (7 hrs)',
+              subtopics: ['Serving LLMs with Docker + FastAPI', 'Cloud deployment (AWS, GCP, Azure)', 'Cost optimization & monitoring']
             },
             {
-              title: 'Production AI Systems',
-              subtopics: ['Model Deployment', 'API Development', 'Scaling Solutions', 'Monitoring', 'MLOps Practices']
+              title: 'AI Safety & Responsible AI (6 hrs)',
+              subtopics: ['Bias in LLMs', 'Prompt injection & jailbreaks', 'Guardrails (Azure Safety, Llama Guard)', 'Responsible AI policies']
             },
             {
-              title: 'AI Ethics & Business',
-              subtopics: ['Ethical AI', 'Bias Detection', 'Responsible AI', 'AI Strategy', 'ROI Measurement']
+              title: 'Autonomous AI & Agentic Systems (8 hrs)',
+              subtopics: ['What is Agentic AI (self-directed AI agents)', 'LangChain Agents (tool-use, reasoning, planning)', 'AutoGPT, BabyAGI, CrewAI', 'Multi-agent collaboration (team of agents with roles)']
+            },
+            {
+              title: 'Anthropic Model Context Protocol (MCP) (8 hrs)',
+              subtopics: ['Introduction to MCP and context-sharing', 'How MCP allows AI models/tools to communicate', 'Structured context passing across agents', 'MCP + Agentic AI integration']
+            },
+            {
+              title: 'Enterprise GenAI Applications (8 hrs)',
+              subtopics: ['Healthcare: diagnostic copilots', 'Finance: fraud/risk copilots', 'Retail: AI-powered assistants', 'Media: generative pipelines (text → video → marketing)']
             }
           ]
         }
       },
-      prerequisites: ['Basic Programming', 'Mathematical Foundation', 'Analytical Thinking'],
-      outcomes: ['Build AI-powered applications', 'Implement LLM solutions', 'Master prompt engineering', 'Deploy AI systems']
+      prerequisites: ['Basic Python programming', 'Understanding of APIs', 'Mathematical foundation'],
+      outcomes: ['Build AI-powered applications', 'Implement LLM solutions', 'Master prompt engineering', 'Deploy AI systems', 'Create Agentic AI systems']
     },
     'blockchain': {
-      duration: '220+ Hours',
+      duration: '150+ Hours',
       students: '300+',
       projects: '12+',
       levels: {
         beginner: {
           title: 'Beginner Level',
-          duration: '75 Hours',
+          duration: '40 Hours',
           topics: [
             {
-              title: 'Blockchain Fundamentals',
-              subtopics: ['What is Blockchain?', 'Distributed Ledger', 'Cryptographic Hashing', 'Digital Signatures', 'Consensus Basics']
+              title: 'Blockchain Fundamentals (6 hrs)',
+              subtopics: ['What is Blockchain? History & evolution (Bitcoin → Ethereum → Web3)', 'Centralized vs Decentralized', 'Distributed Ledger Technology (DLT) basics', 'Consensus mechanisms overview']
             },
             {
-              title: 'Cryptocurrency Basics',
-              subtopics: ['Bitcoin Overview', 'Ethereum Introduction', 'Wallets & Keys', 'Transactions', 'Mining Concepts']
+              title: 'Cryptography & Security Basics (6 hrs)',
+              subtopics: ['Public/Private Keys', 'Hashing (SHA-256, Keccak)', 'Merkle Trees', 'Digital Signatures']
             },
             {
-              title: 'Blockchain Architecture',
-              subtopics: ['Blocks & Chains', 'Merkle Trees', 'Network Types', 'Nodes & Validation', 'Immutability']
+              title: 'Bitcoin & Ethereum Basics (6 hrs)',
+              subtopics: ['Bitcoin UTXO model', 'Ethereum Accounts, Gas & Transactions', 'Testnets (Sepolia, Holesky)', 'Using Etherscan & Blockchain explorers']
             },
             {
-              title: 'Development Environment',
-              subtopics: ['Setting up Tools', 'Test Networks', 'Blockchain Explorers', 'Basic Transactions', 'Wallet Integration']
+              title: 'Smart Contract Introduction (8 hrs)',
+              subtopics: ['Solidity basics: variables, functions, modifiers', 'Remix IDE for contract deployment', 'Events & logs', 'Simple contract deployment']
+            },
+            {
+              title: 'Tools & Wallets (6 hrs)',
+              subtopics: ['MetaMask setup & transactions', 'Ganache for local blockchain', 'Web3.js / Ethers.js introduction', 'DApp structure']
             }
           ]
         },
         intermediate: {
           title: 'Intermediate Level',
-          duration: '75 Hours',
+          duration: '50 Hours',
           topics: [
             {
-              title: 'Smart Contract Development',
-              subtopics: ['Solidity Basics', 'Contract Structure', 'Data Types', 'Functions & Modifiers', 'Events & Logs']
+              title: 'Advanced Smart Contracts (10 hrs)',
+              subtopics: ['Solidity: Inheritance, Libraries, Structs', 'Security patterns (Ownable, Pausable)', 'Hardhat/Truffle for testing & deployment', 'Upgradeable contracts']
             },
             {
-              title: 'Web3 Development',
-              subtopics: ['Web3.js Library', 'Ethereum API', 'Contract Interaction', 'Frontend Integration', 'MetaMask Connection']
+              title: 'Token Standards (8 hrs)',
+              subtopics: ['ERC-20 Fungible Tokens', 'ERC-721 NFTs', 'ERC-1155 Multi-tokens', 'Gas optimization in tokens']
             },
             {
-              title: 'DApp Architecture',
-              subtopics: ['Frontend Design', 'Backend Services', 'IPFS Storage', 'User Experience', 'Testing Strategies']
+              title: 'DeFi Basics (10 hrs)',
+              subtopics: ['What is DeFi? Lending, borrowing, yield farming', 'Automated Market Makers (Uniswap model)', 'Liquidity Pools & Staking', 'Governance tokens']
             },
             {
-              title: 'Token Development',
-              subtopics: ['ERC-20 Tokens', 'ERC-721 NFTs', 'Token Economics', 'ICO/IDO Concepts', 'Token Standards']
+              title: 'Oracles & Off-Chain Data (7 hrs)',
+              subtopics: ['What are Oracles?', 'Chainlink basics', 'Connecting contracts to external APIs', 'Real-world use cases']
+            },
+            {
+              title: 'Scaling Solutions (7 hrs)',
+              subtopics: ['Layer 2: Polygon, Arbitrum, Optimism', 'Rollups, Plasma, State Channels', 'Bridges between chains']
             }
           ]
         },
         advanced: {
           title: 'Advanced Level',
-          duration: '70 Hours',
+          duration: '60 Hours',
           topics: [
             {
-              title: 'DeFi Development',
-              subtopics: ['DEX Protocols', 'Liquidity Pools', 'Yield Farming', 'Flash Loans', 'Governance Tokens']
+              title: 'Blockchain Architecture & Consensus (10 hrs)',
+              subtopics: ['Proof of Work vs Proof of Stake vs Delegated Proof of Stake', 'Byzantine Fault Tolerance (BFT)', 'Sharding & scalability models', 'Blockchain governance']
             },
             {
-              title: 'Advanced Smart Contracts',
-              subtopics: ['Design Patterns', 'Security Auditing', 'Gas Optimization', 'Upgradeable Contracts', 'Cross-chain']
+              title: 'Enterprise Blockchain (10 hrs)',
+              subtopics: ['Hyperledger Fabric (Peers, Orderers, Channels)', 'Writing chaincode in Go', 'R3 Corda basics (Java/Kotlin)', 'Identity & permissioned blockchains']
             },
             {
-              title: 'Enterprise Blockchain',
-              subtopics: ['Private Networks', 'Hyperledger', 'Supply Chain', 'Identity Management', 'Consortium Chains']
+              title: 'Interoperability & Cross-Chain (8 hrs)',
+              subtopics: ['Blockchain bridges', 'Polkadot & Substrate (Rust)', 'Cosmos SDK & IBC protocol', 'Cross-chain asset swaps']
             },
             {
-              title: 'Emerging Technologies',
-              subtopics: ['Layer 2 Solutions', 'Interoperability', 'Quantum Resistance', 'Green Blockchain', 'Future Trends']
+              title: 'Security & Auditing (8 hrs)',
+              subtopics: ['Vulnerabilities (Reentrancy, Overflow, DoS)', 'Audit tools: MythX, Slither', 'Using OpenZeppelin contracts', 'Best practices & bug bounties']
+            },
+            {
+              title: 'Real-World Applications & Future Trends (8 hrs)',
+              subtopics: ['Blockchain in Supply Chain, Healthcare, Voting', 'Stablecoins & CBDCs', 'Decentralized Identity (DID)', 'Zero-Knowledge Proofs (ZK-SNARKs, ZK-Rollups)']
             }
           ]
         }
       },
-      prerequisites: ['Programming Basics', 'Web Development', 'Cryptography Concepts'],
-      outcomes: ['Build blockchain applications', 'Develop smart contracts', 'Create DeFi protocols', 'Launch NFT projects']
+      prerequisites: ['Programming basics (JavaScript/Python)', 'Web development concepts', 'Basic cryptography understanding'],
+      outcomes: ['Build blockchain applications', 'Develop smart contracts', 'Create DeFi protocols', 'Launch NFT projects', 'Design enterprise blockchain solutions']
     },
     'data-science': {
-      duration: '260+ Hours',
+      duration: '215+ Hours',
       students: '800+',
-      projects: '20+',
-      levels: {
-        beginner: {
-          title: 'Beginner Level',
-          duration: '85 Hours',
-          topics: [
-            {
-              title: 'Python Programming',
-              subtopics: ['Python Syntax', 'Data Structures', 'Control Flow', 'Functions', 'Object-Oriented Programming']
-            },
-            {
-              title: 'Data Analysis Basics',
-              subtopics: ['NumPy Arrays', 'Pandas DataFrames', 'Data Cleaning', 'Data Transformation', 'File Handling']
-            },
-            {
-              title: 'Statistics Foundation',
-              subtopics: ['Descriptive Statistics', 'Probability', 'Distributions', 'Hypothesis Testing', 'Correlation']
-            },
-            {
-              title: 'Data Visualization',
-              subtopics: ['Matplotlib Basics', 'Seaborn Plots', 'Chart Types', 'Color Theory', 'Storytelling with Data']
-            }
-          ]
-        },
-        intermediate: {
-          title: 'Intermediate Level',
-          duration: '90 Hours',
-          topics: [
-            {
-              title: 'Machine Learning Algorithms',
-              subtopics: ['Linear Regression', 'Classification', 'Clustering', 'Decision Trees', 'Random Forest']
-            },
-            {
-              title: 'Feature Engineering',
-              subtopics: ['Feature Selection', 'Scaling & Normalization', 'Encoding Techniques', 'Dimensionality Reduction', 'PCA']
-            },
-            {
-              title: 'Model Evaluation',
-              subtopics: ['Cross Validation', 'Performance Metrics', 'Confusion Matrix', 'ROC Curves', 'Overfitting']
-            },
-            {
-              title: 'Advanced Analytics',
-              subtopics: ['Time Series Analysis', 'Text Mining', 'Web Scraping', 'A/B Testing', 'Business Intelligence']
-            }
-          ]
-        },
-        advanced: {
-          title: 'Advanced Level',
-          duration: '85 Hours',
-          topics: [
-            {
-              title: 'Deep Learning',
-              subtopics: ['Neural Networks', 'CNNs', 'RNNs', 'Transfer Learning', 'TensorFlow/PyTorch']
-            },
-            {
-              title: 'Big Data Technologies',
-              subtopics: ['Apache Spark', 'Hadoop Ecosystem', 'NoSQL Databases', 'Data Pipelines', 'Cloud Platforms']
-            },
-            {
-              title: 'MLOps & Deployment',
-              subtopics: ['Model Versioning', 'CI/CD for ML', 'Containerization', 'API Development', 'Monitoring']
-            },
-            {
-              title: 'Specialized Applications',
-              subtopics: ['Computer Vision', 'NLP Applications', 'Recommender Systems', 'Forecasting', 'Optimization']
-            }
-          ]
-        }
-      },
-      prerequisites: ['Basic Mathematics', 'Programming Concepts', 'Statistical Thinking'],
-      outcomes: ['Analyze complex datasets', 'Build ML models', 'Create data visualizations', 'Deploy ML solutions']
-    },
-    'devops': {
-      duration: '200+ Hours',
-      students: '600+',
-      projects: '18+',
-      levels: {
-        beginner: {
-          title: 'Beginner Level',
-          duration: '65 Hours',
-          topics: [
-            {
-              title: 'DevOps Fundamentals',
-              subtopics: ['DevOps Culture', 'Agile Methodology', 'Version Control (Git)', 'Linux Basics', 'Command Line']
-            },
-            {
-              title: 'System Administration',
-              subtopics: ['Linux Administration', 'Shell Scripting', 'Process Management', 'File Systems', 'Network Basics']
-            },
-            {
-              title: 'Version Control',
-              subtopics: ['Git Fundamentals', 'Branching Strategies', 'Merge Conflicts', 'GitHub/GitLab', 'Code Reviews']
-            },
-            {
-              title: 'Basic Automation',
-              subtopics: ['Scripting Languages', 'Task Automation', 'Cron Jobs', 'Log Management', 'Basic Monitoring']
-            }
-          ]
-        },
-        intermediate: {
-          title: 'Intermediate Level',
-          duration: '70 Hours',
-          topics: [
-            {
-              title: 'CI/CD Pipelines',
-              subtopics: ['Jenkins Setup', 'GitHub Actions', 'Build Automation', 'Testing Integration', 'Deployment Strategies']
-            },
-            {
-              title: 'Containerization',
-              subtopics: ['Docker Fundamentals', 'Container Images', 'Docker Compose', 'Registry Management', 'Best Practices']
-            },
-            {
-              title: 'Cloud Platforms',
-              subtopics: ['AWS/Azure Basics', 'Virtual Machines', 'Storage Services', 'Networking', 'Security Groups']
-            },
-            {
-              title: 'Configuration Management',
-              subtopics: ['Ansible Basics', 'Playbooks', 'Infrastructure Automation', 'Server Configuration', 'Package Management']
-            }
-          ]
-        },
-        advanced: {
-          title: 'Advanced Level',
-          duration: '65 Hours',
-          topics: [
-            {
-              title: 'Kubernetes Orchestration',
-              subtopics: ['K8s Architecture', 'Pods & Services', 'Deployments', 'ConfigMaps', 'Helm Charts']
-            },
-            {
-              title: 'Infrastructure as Code',
-              subtopics: ['Terraform', 'CloudFormation', 'State Management', 'Multi-environment', 'Best Practices']
-            },
-            {
-              title: 'Monitoring & Observability',
-              subtopics: ['Prometheus', 'Grafana', 'ELK Stack', 'Distributed Tracing', 'Alerting']
-            },
-            {
-              title: 'Advanced Practices',
-              subtopics: ['GitOps', 'Service Mesh', 'Security Scanning', 'Cost Optimization', 'Disaster Recovery']
-            }
-          ]
-        }
-      },
-      prerequisites: ['Linux Knowledge', 'Programming Skills', 'Networking Basics'],
-      outcomes: ['Implement CI/CD pipelines', 'Manage containerized applications', 'Automate infrastructure', 'Optimize cloud deployments']
-    },
-    'microservices': {
-      duration: '180+ Hours',
-      students: '400+',
       projects: '16+',
       levels: {
         beginner: {
-          title: 'Beginner Level',
+          title: 'Beginner Level - Foundations',
           duration: '60 Hours',
           topics: [
             {
-              title: 'Microservices Introduction',
-              subtopics: ['Monolith vs Microservices', 'Benefits & Challenges', 'When to Use', 'Service Boundaries', 'Design Principles']
+              title: 'Introduction to Data Science (4 hrs)',
+              subtopics: ['What is Data Science?', 'Data Science lifecycle (CRISP-DM)', 'Key roles: Data Scientist, Data Analyst, ML Engineer', 'Tools overview (Jupyter, Anaconda, Colab)']
             },
             {
-              title: 'API Development',
-              subtopics: ['RESTful APIs', 'HTTP Methods', 'Status Codes', 'JSON/XML', 'API Documentation']
+              title: 'Python for Data Science (10 hrs)',
+              subtopics: ['Python basics refresher (loops, functions, OOP)', 'NumPy: arrays, broadcasting, linear algebra', 'Pandas: Series, DataFrame, indexing, groupby', 'Matplotlib & Seaborn: plots, subplots, styles']
             },
             {
-              title: 'Service Communication',
-              subtopics: ['Synchronous Communication', 'HTTP/REST', 'Request/Response', 'Error Handling', 'Timeouts']
+              title: 'Data Acquisition & Wrangling (8 hrs)',
+              subtopics: ['Importing CSV, Excel, JSON, SQL databases', 'APIs for data (REST APIs, requests library)', 'Web scraping with BeautifulSoup/Scrapy', 'Cleaning data: duplicates, missing values, inconsistent formats']
             },
             {
-              title: 'Basic Architecture',
-              subtopics: ['Service Design', 'Data Storage', 'Stateless Services', 'Configuration', 'Environment Setup']
+              title: 'Data Visualization & EDA (8 hrs)',
+              subtopics: ['Matplotlib advanced: subplots, annotations', 'Seaborn: heatmaps, pairplots, violinplots', 'Plotly for interactive dashboards', 'Hands-on: Exploratory Data Analysis (EDA)']
+            },
+            {
+              title: 'Statistics & Probability for DS (10 hrs)',
+              subtopics: ['Descriptive stats (mean, median, mode, std dev)', 'Probability theory basics', 'Distributions (Normal, Binomial, Poisson, Exponential)', 'Central Limit Theorem', 'Confidence intervals, p-values', 'Hypothesis testing (t-test, ANOVA, Chi-square)']
+            },
+            {
+              title: 'Intro to Machine Learning (10 hrs)',
+              subtopics: ['ML workflow (train, validate, test split)', 'Supervised vs Unsupervised Learning', 'Regression (Linear, Polynomial)', 'Classification (Logistic Regression, KNN)', 'Metrics: accuracy, precision, recall, F1']
+            }
+          ]
+        },
+        intermediate: {
+          title: 'Intermediate Level - Core ML',
+          duration: '70 Hours',
+          topics: [
+            {
+              title: 'Supervised ML Algorithms (12 hrs)',
+              subtopics: ['Decision Trees, Random Forests', 'Support Vector Machines (SVM)', 'Gradient Boosting (XGBoost, LightGBM, CatBoost)', 'Evaluation metrics (ROC, AUC, confusion matrix)']
+            },
+            {
+              title: 'Unsupervised ML Algorithms (10 hrs)',
+              subtopics: ['K-Means clustering', 'Hierarchical clustering', 'DBSCAN', 'Dimensionality reduction (PCA, t-SNE)']
+            },
+            {
+              title: 'Feature Engineering & Model Optimization (8 hrs)',
+              subtopics: ['Feature selection (Variance threshold, RFE)', 'Encoding categorical variables (One-hot, Label encoding)', 'Normalization & standardization', 'Hyperparameter tuning (GridSearchCV, RandomizedSearchCV, Optuna)']
+            },
+            {
+              title: 'Time Series Analysis (10 hrs)',
+              subtopics: ['Moving averages, trends, seasonality', 'ARIMA, SARIMA models', 'Prophet (Facebook Prophet)', 'LSTMs for time series']
+            },
+            {
+              title: 'Deep Learning Foundations (12 hrs)',
+              subtopics: ['Neural networks basics (perceptrons, backpropagation)', 'Activation functions (ReLU, Sigmoid, Softmax)', 'Optimizers (SGD, Adam, RMSprop)', 'Keras/TensorFlow basics']
+            },
+            {
+              title: 'Natural Language Processing (NLP) (10 hrs)',
+              subtopics: ['Text preprocessing (stemming, lemmatization, tokenization)', 'Bag of Words & TF-IDF', 'Word embeddings (Word2Vec, GloVe, FastText)', 'Sentiment analysis (Naive Bayes, Logistic Regression)']
+            }
+          ]
+        },
+        advanced: {
+          title: 'Advanced Level - AI & Big Data',
+          duration: '85 Hours',
+          topics: [
+            {
+              title: 'Advanced Deep Learning (15 hrs)',
+              subtopics: ['Convolutional Neural Networks (CNN)', 'Recurrent Neural Networks (RNN, LSTM, GRU)', 'Attention mechanism', 'Transfer Learning (ResNet, VGG, MobileNet)']
+            },
+            {
+              title: 'Advanced NLP & Transformers (15 hrs)',
+              subtopics: ['Sequence-to-sequence models', 'Attention mechanism explained', 'Transformers (BERT, GPT)', 'Hugging Face library', 'Text summarization, question answering']
+            },
+            {
+              title: 'Reinforcement Learning (10 hrs)',
+              subtopics: ['Q-Learning fundamentals', 'Deep Q-Networks (DQN)', 'Policy Gradient methods', 'Applications in robotics & gaming']
+            },
+            {
+              title: 'Big Data & Distributed ML (12 hrs)',
+              subtopics: ['Introduction to Big Data ecosystem', 'Apache Spark with PySpark for ML', 'MLlib for distributed ML', 'Integration with Hadoop & Hive']
+            },
+            {
+              title: 'MLOps – Deploying ML Models (15 hrs)',
+              subtopics: ['Deploy ML models with Flask/FastAPI', 'Model packaging with Docker', 'CI/CD for ML pipelines', 'Model monitoring & retraining', 'Cloud deployment (AWS Sagemaker, GCP Vertex AI, Azure ML)']
+            },
+            {
+              title: 'Ethics, Fairness & Responsible AI (8 hrs)',
+              subtopics: ['Bias in ML models', 'Explainability (LIME, SHAP)', 'AI safety & regulation', 'Case studies on fairness']
+            }
+          ]
+        }
+      },
+      prerequisites: ['Basic mathematics & statistics', 'Python programming', 'Data analysis fundamentals'],
+      outcomes: ['Analyze complex datasets', 'Build ML models', 'Create data visualizations', 'Deploy ML solutions', 'Handle big data technologies']
+    },
+    'devops': {
+      duration: '140+ Hours',
+      students: '600+',
+      projects: '10+',
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '40 Hours',
+          topics: [
+            {
+              title: 'Introduction to DevOps (3 hrs)',
+              subtopics: ['Evolution of Software Development (Waterfall → Agile → DevOps)', 'DevOps principles and lifecycle', 'Key tools overview (Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, Monitoring)']
+            },
+            {
+              title: 'Linux Fundamentals for DevOps (5 hrs)',
+              subtopics: ['Basic Linux commands (file system, permissions, process management)', 'Shell scripting basics', 'User & group management', 'Package management (apt, yum, dnf)']
+            },
+            {
+              title: 'Version Control with Git & GitHub (6 hrs)',
+              subtopics: ['Git architecture, Git workflow (clone, commit, push, pull, merge)', 'Branching strategies (Git Flow, trunk-based development)', 'GitHub features: Issues, Pull Requests, Actions basics', 'Secret scanning with Gitleaks']
+            },
+            {
+              title: 'Build Automation with Maven/Gradle (4 hrs)',
+              subtopics: ['Build lifecycle & dependency management', 'Creating and packaging applications', 'Integration with CI/CD']
+            },
+            {
+              title: 'Containerization with Docker (7 hrs)',
+              subtopics: ['Docker architecture (images, containers, volumes, networks)', 'Dockerfile creation & optimization', 'Pushing/pulling from Docker Hub', 'Secure image best practices']
+            },
+            {
+              title: 'Continuous Integration with Jenkins (5 hrs)',
+              subtopics: ['Jenkins installation & pipeline basics', 'Jenkins master-agent setup', 'Job configuration & parameterized builds', 'Integration with Git']
+            },
+            {
+              title: 'Automated Testing with Selenium & JUnit (5 hrs)',
+              subtopics: ['Introduction to automated testing', 'Writing test cases with Selenium', 'Maven integration with testing', 'Headless browser testing']
             }
           ]
         },
         intermediate: {
           title: 'Intermediate Level',
-          duration: '60 Hours',
+          duration: '45 Hours',
           topics: [
             {
-              title: 'Advanced Communication',
-              subtopics: ['Message Queues', 'Event-Driven Architecture', 'Async Messaging', 'Message Brokers', 'Pub/Sub Patterns']
+              title: 'Container Orchestration with Kubernetes (8 hrs)',
+              subtopics: ['Kubernetes architecture (nodes, pods, deployments, services)', 'ConfigMaps, Secrets, StatefulSets, DaemonSets', 'Autoscaling (HPA, VPA)', 'Ingress & LoadBalancer setup']
             },
             {
-              title: 'Service Integration',
-              subtopics: ['API Gateway', 'Service Discovery', 'Load Balancing', 'Circuit Breaker', 'Retry Patterns']
+              title: 'Configuration Management with Ansible & Puppet (6 hrs)',
+              subtopics: ['Ansible: Playbooks, roles, dynamic inventory', 'Puppet: Manifests, modules, agents', 'Configuring cloud servers (AWS EC2 examples)']
             },
             {
-              title: 'Data Management',
-              subtopics: ['Database per Service', 'Data Consistency', 'Distributed Transactions', 'Event Sourcing', 'CQRS']
+              title: 'Infrastructure as Code with Terraform (6 hrs)',
+              subtopics: ['Terraform basics (providers, resources, state, variables, outputs)', 'AWS provisioning: VPC, EC2, S3', 'Modules, workspaces & security best practices']
             },
             {
-              title: 'Testing Strategies',
-              subtopics: ['Unit Testing', 'Integration Testing', 'Contract Testing', 'End-to-End Testing', 'Test Automation']
+              title: 'Continuous Delivery with GitLab CI/CD (5 hrs)',
+              subtopics: ['GitLab runners (shared vs self-hosted)', 'Stages, jobs, caching, artifacts', 'Docker integration in GitLab pipelines', 'Deployments to AWS (ECR, ECS, EC2)']
+            },
+            {
+              title: 'Continuous Monitoring (6 hrs)',
+              subtopics: ['Prometheus: setup, metrics, PromQL queries', 'Grafana: dashboard creation, alerts', 'ELK Stack (Elasticsearch, Logstash, Kibana) basics']
+            },
+            {
+              title: 'Generative AI in DevOps (2 hrs)',
+              subtopics: ['GitHub Copilot for code suggestions', 'Automating scripts and error handling', 'AI-assisted documentation']
+            },
+            {
+              title: 'Security Basics in DevOps (4 hrs)',
+              subtopics: ['DevSecOps introduction', 'Static Application Security Testing (SAST)', 'Dynamic Application Security Testing (DAST)', 'Dependency scanning']
+            }
+          ]
+        },
+        advanced: {
+          title: 'Advanced Level',
+          duration: '55 Hours',
+          topics: [
+            {
+              title: 'Advanced Kubernetes & Security (8 hrs)',
+              subtopics: ['RBAC & Network Policies', 'Pod Security Standards', 'Image scanning & runtime protection', 'Kubernetes auditing & monitoring']
+            },
+            {
+              title: 'AWS EKS & Cloud Native Workloads (6 hrs)',
+              subtopics: ['Provisioning AWS EKS with Terraform', 'Cluster autoscaler setup', 'Add-ons (ALB Ingress Controller, ExternalDNS)', 'Compliance checks']
+            },
+            {
+              title: 'Service Mesh with Istio (6 hrs)',
+              subtopics: ['Istio architecture', 'mTLS, ingress & egress', 'Traffic management (blue-green, canary)', 'Observability with Istio dashboards']
+            },
+            {
+              title: 'Policy-as-Code with OPA Gatekeeper (4 hrs)',
+              subtopics: ['OPA fundamentals', 'Constraint templates & policies', 'Integrating OPA into CI/CD pipelines']
+            },
+            {
+              title: 'Secrets Management (4 hrs)',
+              subtopics: ['Vault basics (KV secrets, policies, tokens)', 'AWS Secrets Manager', 'Kubernetes External Secrets Operator']
+            },
+            {
+              title: 'GitOps with ArgoCD & Kustomize (6 hrs)',
+              subtopics: ['GitOps fundamentals', 'Declarative deployments with ArgoCD', 'Application rollback & sync waves', 'Using Kustomize for environment overlays']
+            },
+            {
+              title: 'DevSecOps & Compliance (6 hrs)',
+              subtopics: ['End-to-end security integration in pipelines', 'DefectDojo for vulnerability management', 'Compliance frameworks (CIS, NIST, PCI-DSS)']
+            }
+          ]
+        }
+      },
+      prerequisites: ['Linux command line experience', 'Basic programming/scripting', 'Networking fundamentals'],
+      outcomes: ['Implement CI/CD pipelines', 'Manage containerized applications', 'Automate infrastructure', 'Optimize cloud deployments', 'Ensure security compliance']
+    },
+    'microservices': {
+      duration: '150+ Hours',
+      students: '400+',
+      projects: '15+',
+      levels: {
+        beginner: {
+          title: 'Beginner Level',
+          duration: '40-45 Hours',
+          topics: [
+            {
+              title: 'Microservices Fundamentals (4 hrs)',
+              subtopics: ['Monolith vs SOA vs Microservices', 'Microservices advantages & challenges', '12-Factor app principles', 'Industry use cases (Netflix, Amazon, Uber)']
+            },
+            {
+              title: 'Java Microservices with Spring Boot (8 hrs)',
+              subtopics: ['Spring Boot project setup (Maven/Gradle)', 'REST controllers, DTOs, exception handling', 'Data access with Spring Data JPA', 'Testing with JUnit + Postman', 'Swagger/OpenAPI docs']
+            },
+            {
+              title: 'Python Microservices with Flask & FastAPI (8 hrs)',
+              subtopics: ['Flask basics: routes, request handling', 'FastAPI async APIs with Pydantic models', 'CRUD APIs with SQLAlchemy', 'Dependency injection in FastAPI', 'Auto-generated API docs (Swagger, Redoc)']
+            },
+            {
+              title: 'Database Integration (6 hrs)',
+              subtopics: ['SQL databases: PostgreSQL/MySQL', 'NoSQL databases: MongoDB basics', 'ORM: Hibernate (Java), SQLAlchemy (Python)', 'Database migrations (Flyway, Alembic)']
+            },
+            {
+              title: 'Containerization with Docker (7 hrs)',
+              subtopics: ['Docker concepts: images, containers, volumes', 'Dockerizing Java Spring Boot service', 'Dockerizing Python FastAPI service', 'Networking in Docker', 'Multi-service setup with Docker Compose']
+            }
+          ]
+        },
+        intermediate: {
+          title: 'Intermediate Level',
+          duration: '50 Hours',
+          topics: [
+            {
+              title: 'Inter-Service Communication (7 hrs)',
+              subtopics: ['REST communication', 'gRPC for microservices', 'API Gateway: Kong, Nginx, Spring Cloud Gateway']
+            },
+            {
+              title: 'Messaging & Event-Driven Architecture (7 hrs)',
+              subtopics: ['Synchronous vs asynchronous communication', 'RabbitMQ producers/consumers in Java + Python', 'Kafka basics: topics, partitions, producers, consumers', 'Event sourcing vs CQRS']
+            },
+            {
+              title: 'Service Discovery & Configuration (7 hrs)',
+              subtopics: ['Eureka service registry (Spring Cloud)', 'Consul for Python microservices', 'Centralized config with Spring Cloud Config Server', 'Environment variables, secrets management']
+            },
+            {
+              title: 'Security in Microservices (7 hrs)',
+              subtopics: ['Authentication vs Authorization', 'JWT authentication flow', 'Spring Security with OAuth2', 'FastAPI JWT + OAuth2 integration', 'Role-based access control (RBAC)']
+            },
+            {
+              title: 'Observability (7 hrs)',
+              subtopics: ['Centralized logging with ELK stack', 'Distributed tracing with Zipkin/Jaeger', 'Metrics collection with Prometheus', 'Visualization with Grafana']
             }
           ]
         },
@@ -362,45 +458,49 @@ const Courses = () => {
           duration: '60 Hours',
           topics: [
             {
-              title: 'Distributed Systems',
-              subtopics: ['CAP Theorem', 'Eventual Consistency', 'Distributed Consensus', 'Partition Tolerance', 'Fault Tolerance']
+              title: 'Microservices Design Patterns (8 hrs)',
+              subtopics: ['Saga pattern for distributed transactions', 'Circuit breaker (Resilience4j, Hystrix)', 'Strangler Fig & API Composition', 'Bulkhead & Retry patterns']
             },
             {
-              title: 'Observability',
-              subtopics: ['Distributed Tracing', 'Centralized Logging', 'Metrics Collection', 'Health Checks', 'Alerting']
+              title: 'CI/CD Pipelines for Microservices (8 hrs)',
+              subtopics: ['CI/CD with Jenkins pipelines', 'GitLab CI/CD for multi-service apps', 'Docker build & push to registry', 'Automated integration tests']
             },
             {
-              title: 'Security & Governance',
-              subtopics: ['Service-to-Service Auth', 'OAuth/JWT', 'API Security', 'Data Encryption', 'Compliance']
+              title: 'Cloud-Native Microservices (10 hrs)',
+              subtopics: ['Kubernetes fundamentals (pods, services, deployments)', 'Ingress controller setup', 'ConfigMaps & Secrets', 'Horizontal Pod Autoscaling (HPA)', 'Deploying microservices on EKS/GKE/AKS']
             },
             {
-              title: 'Performance & Scaling',
-              subtopics: ['Horizontal Scaling', 'Caching Strategies', 'Database Optimization', 'Performance Tuning', 'Capacity Planning']
+              title: 'Service Mesh & Advanced Security (8 hrs)',
+              subtopics: ['Istio basics: sidecar proxy, ingress/egress', 'Mutual TLS between microservices', 'Policy enforcement with OPA Gatekeeper', 'Zero-trust networking in microservices']
+            },
+            {
+              title: 'Resiliency & Production Best Practices (8 hrs)',
+              subtopics: ['Canary & blue-green deployments', 'API versioning strategies', 'Observability with OpenTelemetry', 'Handling failures gracefully', 'Cost optimization & scaling strategies']
             }
           ]
         }
       },
-      prerequisites: ['Backend Development', 'Database Design', 'API Knowledge'],
-      outcomes: ['Design microservices architecture', 'Implement distributed systems', 'Handle service communication', 'Optimize system performance']
+      prerequisites: ['Java or Python programming', 'REST API development', 'Database design concepts'],
+      outcomes: ['Design microservices architecture', 'Implement distributed systems', 'Handle service communication', 'Deploy cloud-native applications', 'Optimize system performance']
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-primary/10 to-accent/10">
-        <div className="container mx-auto px-4 py-20">
+      <div className="relative overflow-hidden">
+        <div className="container mx-auto px-4 py-12">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-4 bg-gradient-accent text-accent-foreground shadow-glow">
               <BookOpen className="w-4 h-4 mr-2" />
               Comprehensive Course Catalog
             </Badge>
             
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-6">
               Master Future Technologies
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Dive deep into cutting-edge technologies with our comprehensive training programs. 
               Each course is designed with detailed curriculum and hands-on projects.
             </p>
@@ -492,7 +592,7 @@ const Courses = () => {
                 <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
                   <CardHeader>
                     <CardTitle className="text-foreground flex items-center">
-                      <Badge className="mr-3 bg-success text-success-foreground">Beginner</Badge>
+                      <Badge className="mr-3 bg-success text-success-foreground">🟢 Beginner</Badge>
                       {courseDetails[course.id as keyof typeof courseDetails].levels.beginner.title}
                     </CardTitle>
                     <CardDescription>
@@ -522,7 +622,7 @@ const Courses = () => {
                 <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
                   <CardHeader>
                     <CardTitle className="text-foreground flex items-center">
-                      <Badge className="mr-3 bg-primary text-primary-foreground">Intermediate</Badge>
+                      <Badge className="mr-3 bg-primary text-primary-foreground">🟡 Intermediate</Badge>
                       {courseDetails[course.id as keyof typeof courseDetails].levels.intermediate.title}
                     </CardTitle>
                     <CardDescription>
@@ -552,7 +652,7 @@ const Courses = () => {
                 <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
                   <CardHeader>
                     <CardTitle className="text-foreground flex items-center">
-                      <Badge className="mr-3 bg-accent text-accent-foreground">Advanced</Badge>
+                      <Badge className="mr-3 bg-accent text-accent-foreground">🔴 Advanced</Badge>
                       {courseDetails[course.id as keyof typeof courseDetails].levels.advanced.title}
                     </CardTitle>
                     <CardDescription>
@@ -579,8 +679,8 @@ const Courses = () => {
                 </Card>
               </div>
 
-              {/* Prerequisites & Outcomes Sidebar */}
-              <div className="space-y-6">
+              {/* Prerequisites & Outcomes */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <Card className="bg-gradient-card backdrop-blur-sm border-border/50 shadow-card">
                   <CardHeader>
                     <CardTitle className="text-foreground">Prerequisites</CardTitle>
@@ -612,24 +712,6 @@ const Courses = () => {
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
-
-                {/* Quick Stats */}
-                <Card className="bg-gradient-primary text-primary-foreground border-0">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-2xl font-bold mb-2">{courseDetails[course.id as keyof typeof courseDetails].duration}</div>
-                    <div className="text-sm opacity-90 mb-4">Total Training Duration</div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <div className="font-semibold">{courseDetails[course.id as keyof typeof courseDetails].students}</div>
-                        <div className="opacity-75">Students</div>
-                      </div>
-                      <div>
-                        <div className="font-semibold">{courseDetails[course.id as keyof typeof courseDetails].projects}</div>
-                        <div className="opacity-75">Projects</div>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </div>
