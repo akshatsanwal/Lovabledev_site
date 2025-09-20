@@ -6,6 +6,7 @@ import { GraduationCap, Star, Users, Award } from 'lucide-react';
 import CourseCard from '@/components/CourseCard';
 import Cart from '@/components/Cart';
 import { CartItem, COURSES, TIERS } from '@/types/course';
+import { Link } from 'react-router-dom';
 import trainingHero from '@/assets/training-hero.jpg';
 
 const Pricing = () => {
@@ -136,9 +137,11 @@ const Pricing = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-primary hover:bg-gradient-hero text-primary-foreground shadow-elegant hover:shadow-glow">
-                Explore Courses
-              </Button>
+              <Link to="/courses">
+                <Button size="lg" className="bg-gradient-primary hover:bg-gradient-hero text-primary-foreground shadow-elegant hover:shadow-glow">
+                  Know More Details About Courses
+                </Button>
+              </Link>
               <Cart 
                 items={cartItems}
                 onUpdateQuantity={updateQuantity}

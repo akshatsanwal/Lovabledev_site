@@ -1,7 +1,7 @@
-import Pricing from './Pricing';
+import Courses from './Courses';
 
 const Index = () => {
-  return <Pricing />;
+  return <Courses />;
 };
 
 export default Index;
